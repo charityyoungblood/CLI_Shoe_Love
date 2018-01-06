@@ -12,3 +12,6 @@ require "CLI_Shoe_Love"
 
 require "irb"
 IRB.start(__FILE__)
+
+puts "Welcome to Shoe Love!"
+
