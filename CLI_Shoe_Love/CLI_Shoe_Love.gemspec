@@ -6,11 +6,10 @@ require "CLI_Shoe_Love/version"
 Gem::Specification.new do |spec|
   spec.name          = "CLI_Shoe_Love"
   spec.version       = CLIShoeLove::VERSION
-  spec.authors       = ["Charity "]
+  spec.authors       = ["Charity Youngblood"]
   spec.email         = ["Youngblood.charity@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{For shoe lovers}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
