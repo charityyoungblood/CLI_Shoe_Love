@@ -6,7 +6,8 @@ class Shoes
     
   end 
   
-  def shoe_questions
+  def shoe_questions # this method should prompt the user with questions for shoe type (occassion), color and heel height
+    # this method will take in user input and return a list of three selections based on user preferences 
     puts "What type of occassion are you shopping for?"
     puts "What color shoes would you prefer?"
     puts "What is your ideal heel height?"
