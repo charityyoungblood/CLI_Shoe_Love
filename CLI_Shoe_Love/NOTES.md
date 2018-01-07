@@ -7,6 +7,15 @@ How to Build a CLI Gem - Project Outline
   - What type of occassion are you shopping for?
   - What color shoes?
   - What heel height? 
+  - Example output: 
+  Based on your preferences, here are a few options that would perfect for you!
+  
+    1. Casablanca Pump, Red, $750 
+    2. Brooklyn Bootie, Red, $495
+    3. Ava Plateau, Red, $570
+    
+  **you may be able to eliminate the color from the output, since the user entered color as a preference**
+    
     ** As you are thinking about how these parts will interact with each other, get something working quickly, by not focusing on the methods needed to display the info, i.e. use puts statements with the info** 
   Ex. display 
     
