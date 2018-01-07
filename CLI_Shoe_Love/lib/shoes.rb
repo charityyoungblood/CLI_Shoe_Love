@@ -7,7 +7,9 @@ class Shoes
   end 
   
   def shoe_questions
-    
+    puts "What type of occassion are you shopping for?"
+    puts "What color shoes would you prefer?"
+    puts "What is your ideal heel height?"
   end 
   
   
