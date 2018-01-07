@@ -1,4 +1,4 @@
-require "CLI_Shoe_Love/version"
+require_relative "CLI_Shoe_Love/version"
 
 module CLIShoeLove
   # Your code goes here...
