@@ -34,4 +34,5 @@ How to Build a CLI Gem - Project Outline
 5. Stub out the interface
 6. Start making things real 
 7. Discover objects 
+  - How will each object work together?
 8. Program 

@@ -5,9 +5,10 @@ class ShoeType
   end 
   
   def type # this method defines shoe type -- this method may need to be moved to shoes class
-    puts "date night"
-    puts "work"
-    puts "special occassion"
+    puts "Pumps"
+    puts "Sandals"
+    puts "Boots"
+    puts "Flats" 
     # determine shoe types to display
       # boots 
       # sandals
