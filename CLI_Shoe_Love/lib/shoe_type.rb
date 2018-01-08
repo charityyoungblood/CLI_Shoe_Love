@@ -1,11 +1,14 @@
 require 'pry'
 
 class ShoeType
+  attr_accessor :pumps, :sandals, :booties, :flats 
   
   def initialize
     
   end 
   
+  # shoe = ShoeType.new
+  # shoe.type = pumps 
   def type # this method defines shoe type -- this method may need to be moved to shoes class
     # shoe type should be an array - this way you can iterate over it and delete depending on user preference
    pumps = [] #array of pumps from website 

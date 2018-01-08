@@ -3,6 +3,7 @@
 class Shoes # set shoe type, color, price, heel height 
    attr_accessor :type, :color, :price, :heel_height
   # access to array of all shoes
+  @@all = []
   def initialize 
     
   end 
