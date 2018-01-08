@@ -18,6 +18,7 @@ end
 
 context "Scraper" do 
   describe "#black_shoes" do 
+    binding.pry
     it "displays web page in HTML format" do 
     end
   end
