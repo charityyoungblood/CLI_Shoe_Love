@@ -1,7 +1,7 @@
 # this is the main class where you can ask a user questions 
 
 class Shoes # set shoe type, color, price, heel height 
-   
+   attr_accessor :type, :color, :price, :heel_height
   # access to array of all shoes
   def initialize 
     
