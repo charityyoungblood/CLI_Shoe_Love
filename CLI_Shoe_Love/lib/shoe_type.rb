@@ -5,7 +5,7 @@ class ShoeType
   end 
   
   def type # this method defines shoe type -- this method may need to be moved to shoes class
-    puts "Pumps"
+    puts "Pumps" # this should be set up to pull pumps based on scrape
     puts "Sandals"
     puts "Boots"
     puts "Flats" 
