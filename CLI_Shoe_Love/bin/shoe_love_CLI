@@ -6,5 +6,5 @@ puts "Welcome to Shoe Love!"
 
 Shoes.new.shoe_questions
 
-ShoeColor.new.color
+
 
