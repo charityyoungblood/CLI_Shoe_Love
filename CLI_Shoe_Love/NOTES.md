@@ -10,7 +10,7 @@ How to Build a CLI Gem - Project Outline
   - Example output: 
   Based on your preferences, here are a few options that would perfect for you!
   
-    1. Casablanca Pump, Red, $750 
+    1. Casablanca, Pump, 6 in, Red - $750 
     2. Brooklyn Bootie, Red, $495
     3. Ava Plateau, Red, $570
     

@@ -26,10 +26,14 @@ class Shoes
       heel_height = gets.chomp
     puts "What price range do you prefer: $450-$600, $600-$750, $750-$900, $900+"
       shoe_price = gets.chomp
+    shoe_name = "Casablanca"
+    shoe_type = "Pump"
+    
+    # the statement below includes represent variables that need to be created
     puts "Here are your results for #{occasion}: /n
-          1. #{shoe_name} - #{shoe_type} - #{shoe_color} - #{shoe_price}
-          2. #{shoe_name} - #{shoe_type} - #{shoe_color} - #{shoe_price}
-          3. #{shoe_name} - #{shoe_type} - #{shoe_color} - #{shoe_price}"
+          1. #{shoe_name} - #{shoe_type} - #{heel_height} - #{shoe_color} - #{shoe_price}
+          2. #{shoe_name} - #{shoe_type} - #{heel_height} - #{shoe_color} - #{shoe_price}
+          3. #{shoe_name} - #{shoe_type} - #{heel_height} - #{shoe_color} - #{shoe_price}"
   end 
   
   
