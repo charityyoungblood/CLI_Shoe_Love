@@ -15,7 +15,7 @@ class Shoes
       # if occasion.downcase == "special occasion"
     puts "What color shoes would you prefer: Black, White, Nude, Blue, Red, Yellow, or Multicolor"
       shoe_color = gets.chomp
-    puts "What is your ideal heel height (in inches): 3, 4, 5, 6, 7"
+    puts "What is your ideal heel height (in inches): None, 4, 5, 6, 7"
       heel_height = gets.chomp
     puts "What price range do you prefer: $450-$600, $600-$750, $750-$900, $900+"
       shoe_price = gets.chomp

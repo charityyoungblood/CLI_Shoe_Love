@@ -11,7 +11,6 @@ class ShoeColor
     puts "Red" 
     puts "Yellow" 
     puts "Multicolor"
-    
   end 
   
   
