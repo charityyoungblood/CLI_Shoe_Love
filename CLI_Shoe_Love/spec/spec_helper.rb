@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "CLI_Shoe_Love"
+require_relative '../config/environment.rb'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

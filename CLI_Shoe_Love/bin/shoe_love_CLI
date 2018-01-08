@@ -4,7 +4,7 @@ require_relative '../config/environment'
 
 puts "Welcome to Shoe Love!"
 
-#Shoes.new.shoe_questions
+Shoes.new.shoe_questions
 
-ShoeType.new.type
+
 
