@@ -1,7 +1,8 @@
 # this is the main class where you can ask a user questions 
 
-class Shoes 
-  
+class Shoes # set shoe type, color, price, heel height 
+   
+  # access to array of all shoes
   def initialize 
     
   end 
@@ -10,9 +11,11 @@ class Shoes
     # this method will take in user input and return a list of three selections based on user preferences 
     puts "What type of occasion are you shopping for: Work, Night Out, Vacation, Special Event"
       occasion = gets.chomp # save in a variable in case you need to operate on
-#       if occasion.downcase == "work"
-         
-        # Shoes.type should return - Pumps, Sandals, Booties, Flats 
+       if occasion.downcase == "work"
+          
+        # Shoes.type should return - Pumps, Sandals, Booties, Flats - will pull from all shoe types
+      # if occasion.downcase == "night out"
+         # Shoes.type should include Pumps, Sandals and Booties 
       # if occasion.downcase == "vacation"
         # shoe type should not include pumps, booties
         # Shoes.type should return - Sandals, Flats 
