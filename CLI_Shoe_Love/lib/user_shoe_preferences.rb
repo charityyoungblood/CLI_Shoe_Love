@@ -10,7 +10,8 @@ class Shoes
     # this method will take in user input and return a list of three selections based on user preferences 
     puts "What type of occasion are you shopping for: Work, Night Out, Vacation, Special Event"
       occasion = gets.chomp # save in a variable in case you need to operate on
-      # if occasion.downcase == "work" 
+#       if occasion.downcase == "work"
+         
         # Shoes.type should return - Pumps, Sandals, Booties, Flats 
       # if occasion.downcase == "vacation"
         # shoe type should not include pumps, booties
