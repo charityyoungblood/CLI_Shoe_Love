@@ -14,7 +14,7 @@ How to Build a CLI Gem - Project Outline
     2. Brooklyn Bootie, Red, $495
     3. Ava Plateau, Red, $570
     
-  **you may be able to eliminate the color from the output, since the user entered color as a preference**
+    
     
     ** As you are thinking about how these parts will interact with each other, get something working quickly, by not focusing on the methods needed to display the info, i.e. use puts statements with the info** 
   Ex. display 
@@ -36,3 +36,7 @@ How to Build a CLI Gem - Project Outline
 7. Discover objects 
   - How will each object work together?
 8. Program 
+9. Project To-do's:
+    - delete spaces after occasion in display (user_questions method)
+    - figure out how shoe_type, shoe_name and occasion are going to tie in to shoe_questions method 
+    

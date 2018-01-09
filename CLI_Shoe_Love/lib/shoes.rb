@@ -18,14 +18,6 @@ class Shoes # set shoe type, color, price, heel height
     @@all = []
   end 
   
-#  def color 
-#    @color
-#  end 
-#  
-#  def color=(color)
-#    @color = color
-#  end 
-  
   def shoe_questions # this method should prompt the user with questions for shoe type (occasion), color and heel height
    
     # this method will take in user input and return a list of three selections based on user preferences 
@@ -53,8 +45,9 @@ class Shoes # set shoe type, color, price, heel height
     puts "What price range do you prefer: $450-$600, $600-$750, $750-$900, $900+"
       @price = gets.chomp
     shoe_name = "Baku Bootie"
+    shoe_type = "Bootie"
     # the statement below includes represent variables that need to be created
-    puts "Here are your results for #{occasion}: /n
+    puts "Here are your results for #{occasion}:
           1. #{shoe_name} - #{shoe_type} - #{@heel_height} - #{@color} - #{@price}
           2. #{shoe_name} - #{shoe_type} - #{@heel_height} - #{@color} - #{@price}
           3. #{shoe_name} - #{shoe_type} - #{@heel_height} - #{@color} - #{@price}"
