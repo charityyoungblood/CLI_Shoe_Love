@@ -3,7 +3,7 @@ require 'pry'
 # this is the main class where you can ask a user questions 
 
 class Shoes # set shoe type, color, price, heel height 
-   attr_accessor :type, :color, :price, :heel_height
+   attr_accessor :type, :price, :heel_height
   # access to array of all shoes
   @@all = []
   def initialize 
@@ -18,15 +18,20 @@ class Shoes # set shoe type, color, price, heel height
     @@all = []
   end 
   
+  def color
+    @color
+  end 
+  
   def shoe_questions # this method should prompt the user with questions for shoe type (occasion), color and heel height
    
     # this method will take in user input and return a list of three selections based on user preferences 
     puts "What type of occasion are you shopping for: Work, Night Out, Vacation, Special Event"
     
       occasion = gets.chomp # save in a variable in case you need to operate on
+    # ***RE-EVALUATE type attribute and how it connects to the program? Do you need a type - shoe name and type are connected once they are displayed*** 
     
-#       if occasion.downcase == "work"
-          
+#      if occasion.downcase == "work"
+#          @type = ""
         # Shoes.type should return - Pumps, Sandals, Booties, Flats - will pull from all shoe types
       # if occasion.downcase == "night out"
          # Shoes.type should include Pumps, Sandals and Booties 
@@ -46,12 +51,24 @@ class Shoes # set shoe type, color, price, heel height
       @price = gets.chomp
     shoe_name = "Baku Bootie"
     shoe_type = "Bootie"
-    # the statement below includes represent variables that need to be created
-    puts "Here are your results for #{occasion}:
-          1. #{shoe_name} - #{shoe_type} - #{@heel_height} - #{@color} - #{@price}
-          2. #{shoe_name} - #{shoe_type} - #{@heel_height} - #{@color} - #{@price}
-          3. #{shoe_name} - #{shoe_type} - #{@heel_height} - #{@color} - #{@price}"
-  end 
+    
+    if occasion.downcase == "work" && @color.downcase == "black" && @heel_height == "6" && @price == "$600"
+      black_shoes = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman/view-all.html?colori=2")
+      black_shoes_scrape = Nokogiri::HTML(open(black_shoes))
+      black_shoes_select = black_shoes_scrape.css("div .info_prodotto").text
+      selection = black_shoes_select.split("QUICK VIEW")
+      puts "Here are your results for #{occasion}:
+        1. #{selection[3]}
+        2. #{selection[6]}
+        3. #{selection[8]}"
+    end 
+  end
+#    # the statement below includes represent variables that need to be created
+#    puts "Here are your results for #{occasion}:
+#          1. #{shoe_name} - #{shoe_type} - #{@heel_height} - #{@color} - #{@price}
+#          2. #{shoe_name} - #{shoe_type} - #{@heel_height} - #{@color} - #{@price}
+#          3. #{shoe_name} - #{shoe_type} - #{@heel_height} - #{@color} - #{@price}"
+ 
   
   
 end 
