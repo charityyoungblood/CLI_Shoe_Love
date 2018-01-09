@@ -2,52 +2,52 @@ require 'pry'
 require 'HTTParty'
 require 'nokogiri'
 require 'open-uri'
-require 'watir'
-require_relative './user_shoe_preferences.rb'
+
 
 class Scraper 
   
   def user_selections 
-      self.get_courses .each do |post|
-      course = Course.new
-      course.title = post.css("h2").text
-      course.schedule = post.css(".date").text
-      course.description = post.css("p").text
+    new_shoe = page_scrape.css("div .info_prodotto").text
+    new_shoe.split("QUICK VIEW")
+      self.get_shoes.each do |best_shoe|
+      shoe = Shoes.new
+      shoe.type = best_shoe.css("h2").text
+      course.color = best_shoe.css(".date").text
+      course.price = best_shoe.css("p").text
+      shoe.heel_height = best_shoe.css("a").text 
       end 
     end 
   
   def get_shoes
-    self.get_page.css(".post")
+    self.get_page.css("div .info_prodotto").text # this returns all of the text of the shoes on the home page, they are not sorted by color,price,etc
+    
   end 
   
   def print_user_selections
-    self.make_courses
-    Course.all.each do |course|
-      if course.title
-        puts "Title: #{course.title}"
-        puts "  Schedule: #{course.schedule}"
-        puts "  Description: #{course.description}"
+    self.user_selections
+    Shoes.all.each do |new_shoes|
+      if shoe.type
+        puts "Type: #{shoe.type}"
+        puts "Color: #{shoe.color}"
+        puts "Price: #{shoe.price}"
+        puts "Heel height: #{shoe.heel_height}"
       end
+    end 
+  end 
   
-  def black_shoes 
-    
-    browser = Watir::Browser.new
-
-    browser.goto('https://www.aquazzura.com/en/boutique-online/woman')
-
-    puts browser.title
-
-    browser.close
-    
-    
-##    page = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman/view-all.html?")
-#    page = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman/view-all.html?colori=2")
+  def get_page 
+    binding.pry
+    all_shoes = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman/view-all.html?")
+    black_shoes = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman/view-all.html?colori=2")
+    # update the variables to show shoes by color
 #    binding.pry
-#    page_scrape = Nokogiri::HTML(page)
+    main_page_scrape = Nokogiri::HTML(all_shoes)
+    all_shoes_select = all_shoes.css("div .info_prodotto").text # this currently works 
+    all_shoes_select.split("QUICK VIEW") # this splits the contents of new_shoe (all shoes listed on first page of Aquazurra site into a comma separated array - not sorted by color,price,etc
 ##    page.css("a #colori_sel_2")
   end
   
-  
+  Scraper.new.get_shoes
   
   
   
