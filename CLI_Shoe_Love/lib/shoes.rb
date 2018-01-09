@@ -54,21 +54,22 @@ class Shoes # set shoe type, color, price, heel height
     
     if occasion.downcase == "work" && @color.downcase == "black" && @heel_height == "6" && @price == "$600"
       black_shoes = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman/view-all.html?colori=2")
-      black_shoes_scrape = Nokogiri::HTML(open(black_shoes))
+      black_shoes_scrape = Nokogiri::HTML(black_shoes)
       black_shoes_select = black_shoes_scrape.css("div .info_prodotto").text
       selection = black_shoes_select.split("QUICK VIEW")
+        updated_selection = selection.collect do |select|
+          select.split("NEW ARRIVAL")
+          # add a regex to take out additional numbers
+        end  
+      new_selection = updated_selection.flatten! 
+      # code works up to here
+      # need to take out the 105 and second number - may need a regex for this 
+     
       puts "Here are your results for #{occasion}:
         1. #{selection[3]}
         2. #{selection[6]}
         3. #{selection[8]}"
     end 
   end
-#    # the statement below includes represent variables that need to be created
-#    puts "Here are your results for #{occasion}:
-#          1. #{shoe_name} - #{shoe_type} - #{@heel_height} - #{@color} - #{@price}
-#          2. #{shoe_name} - #{shoe_type} - #{@heel_height} - #{@color} - #{@price}
-#          3. #{shoe_name} - #{shoe_type} - #{@heel_height} - #{@color} - #{@price}"
- 
-  
-  
+
 end 

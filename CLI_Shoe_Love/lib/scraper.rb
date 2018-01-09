@@ -51,10 +51,10 @@ class Scraper
 ##  #*** for each variable of shoe color - replicate line 50 and 51 **
 ##    # update the variables to show shoes by color
 ###  
-    all_color_shoes_scrape = Nokogiri::HTML(open(all_color_shoes))
+    all_color_shoes_scrape = Nokogiri::HTML(all_color_shoes)
    all_shoes_select = all_color_shoes_scrape.css("div .info_prodotto").text 
     all_shoes_select.split("QUICK VIEW")
-    
+    binding.pry
 #    black_shoes_scrape = Nokogiri::HTML(open(black_shoes))
 #    gold_shoes_scrape = Nokogiri::HTML(open( gold_shoes))
 #    red_shoes_scrape = Nokogiri::HTML(open(red_shoes))
@@ -69,5 +69,5 @@ class Scraper
   
   
   
-  
+  end
 end 
