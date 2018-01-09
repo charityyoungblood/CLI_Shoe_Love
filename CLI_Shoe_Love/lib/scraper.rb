@@ -2,7 +2,7 @@ require 'pry'
 require 'HTTParty'
 require 'nokogiri'
 require 'open-uri'
-require './shoes.rb'
+require_relative './shoes.rb'
 
 class Scraper 
   
@@ -24,8 +24,7 @@ class Scraper
   end 
   
   def print_user_selections
-#    self.user_selections
-    binding.pry
+    self.user_selections
     Shoes.all.each do |shoe|
       if shoe.type
         puts "Type: #{shoe.type}"
@@ -37,7 +36,7 @@ class Scraper
   end 
   
   def get_page 
-    binding.pry
+    
     # shoe colors Black, Nude, Blue, Red, Yellow, or Multicolor
     any_color_shoes = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman/view-all.html?")
     black_shoes = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman/view-all.html?colori=2")
@@ -54,7 +53,7 @@ class Scraper
 ##    page.css("a #colori_sel_2")
   end
   
-  Scraper.new.get_shoes
+ 
   
   
   

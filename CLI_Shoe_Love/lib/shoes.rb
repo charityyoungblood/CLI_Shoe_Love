@@ -18,6 +18,7 @@ class Shoes # set shoe type, color, price, heel height
   
   
   def shoe_questions # this method should prompt the user with questions for shoe type (occasion), color and heel height
+   
     # this method will take in user input and return a list of three selections based on user preferences 
     puts "What type of occasion are you shopping for: Work, Night Out, Vacation, Special Event"
       occasion = gets.chomp # save in a variable in case you need to operate on
