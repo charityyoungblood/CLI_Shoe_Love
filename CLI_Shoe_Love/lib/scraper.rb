@@ -2,7 +2,7 @@ require 'pry'
 require 'HTTParty'
 require 'nokogiri'
 require 'open-uri'
-
+require './shoes.rb'
 
 class Scraper 
   
@@ -24,8 +24,9 @@ class Scraper
   end 
   
   def print_user_selections
-    self.user_selections
-    Shoes.all.each do |new_shoes|
+#    self.user_selections
+    binding.pry
+    Shoes.all.each do |shoe|
       if shoe.type
         puts "Type: #{shoe.type}"
         puts "Color: #{shoe.color}"
