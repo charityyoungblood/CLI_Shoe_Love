@@ -32,7 +32,7 @@ class Shoes # set shoe type, color, price, heel height
       # if occasion.downcase == "special event"
         # shoe type should include pumps, sandals
         # Shoes.type should return - Pumps, Sandals 
-    puts "What color shoes would you prefer: Black, White, Nude, Blue, Red, Yellow, or Multicolor"
+    puts "What color shoes would you prefer: Black, Gold, Blue, Red, Yellow, or Multicolor"
       shoe_color = gets.chomp
       # sort by occasion and then color 
     puts "What is your ideal heel height (in inches): None, 4, 5, 6, 7"
