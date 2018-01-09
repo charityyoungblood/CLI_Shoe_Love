@@ -43,7 +43,8 @@ class Scraper
     gold_shoes = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman.html?colori=16")
     red_shoes = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman.html?colori=12")
     purple_shoes = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman.html?colori=11")
-  
+    
+  #*** for each variable of shoe color - replicate line 50 and 51 **
     # update the variables to show shoes by color
 #    binding.pry
     main_page_scrape = Nokogiri::HTML(all_shoes)
