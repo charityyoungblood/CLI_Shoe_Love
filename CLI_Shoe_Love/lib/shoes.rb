@@ -41,11 +41,12 @@ class Shoes # set shoe type, color, price, heel height
       # if occasion.downcase == "special event"
         # shoe type should include pumps, sandals
         # Shoes.type should return - Pumps, Sandals 
-    puts "What color shoes would you prefer: Black, Gold, Red, Purple or Any"
+    puts "What color shoes would you prefer: Black, Red, or Any"
       @color = gets.chomp
     
     # sort by occasion and then color 
     puts "What is your ideal heel height (in inches): None, 4, 5, 6, 7"
+    # most shoes listed on sorted site are 105mm - 4 inches (black) and 105mm and 85mm - 3inches for red
       @heel_height = gets.chomp
     puts "What price range do you prefer: $450-$600, $600-$750, $750-$900, $900+"
       @price = gets.chomp
