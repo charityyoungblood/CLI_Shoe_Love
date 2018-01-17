@@ -53,21 +53,31 @@ class Shoes # set shoe type, color, price, heel height
     shoe_name = "Baku Bootie"
     shoe_type = "Bootie"
     
+    # create a loop or call shoe_questions again so that if the user doesn't enter the correct data, they will be asked the question(s) again
+    
     if occasion.downcase == "work" && @color.downcase == "black" && @heel_height == "6" && @price == "$600"
       black_shoes = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman/view-all.html?colori=2")
       black_shoes_scrape = Nokogiri::HTML(black_shoes)
       black_shoes_select = black_shoes_scrape.css("div .info_prodotto").text
       selection = black_shoes_select.split("QUICK VIEW")
-        updated_selection = selection.collect do |select|
+        @updated_selection = selection.collect do |select|
           select.split("NEW ARRIVAL")
+          
           # add a regex to take out additional numbers
         end  
-      new_selection = updated_selection.flatten! 
+          new_selection = @updated_selection.flatten!
+            better_selection = new_selection.collect do |new_shoes|
+            new_shoes.split(" ")
+              better_selection.collect do |better_shoes|
+              better_shoes.slice!(-2..-1)
+        end
+              # create an "if statement" if array has more than 2 elements, than slice (-2..-1), else, slice(-1)
+      end
       # code works up to here
       # need to take out the 105 and second number - may need a regex for this 
-     
+     # the puts statement should select 3 random choices, based on user preferences 
       puts "Here are your results for #{occasion}:
-        1. #{selection[3]}
+        1. #{selection[3]} 
         2. #{selection[6]}
         3. #{selection[8]}"
     end 

@@ -8,13 +8,12 @@ How to Build a CLI Gem - Project Outline
   - What color shoes?
   - What heel height? 
   - Example output: 
+  
   Based on your preferences, here are a few options that would perfect for you!
   
     1. Casablanca, Pump, 6 in, Red - $750 # with hyperlink to page where shoe is listed on Aquazzura.com to purchase 
     2. Brooklyn Bootie, Red, $495
     3. Ava Plateau, Red, $570
-    
-    
     
     ** As you are thinking about how these parts will interact with each other, get something working quickly, by not focusing on the methods needed to display the info, i.e. use puts statements with the info** 
   Ex. display 
@@ -39,4 +38,5 @@ How to Build a CLI Gem - Project Outline
 9. Project To-do's:
     - delete spaces after occasion in display (user_questions method)
     - figure out how shoe_type, shoe_name and occasion are going to tie in to shoe_questions method 
+10. When creating your code - each method should be responsible for one thing - code should not include 20 lines of puts statements - create one method that is responsible for displaying menu, then create another method for asking questions and getting user input, etc 
     
