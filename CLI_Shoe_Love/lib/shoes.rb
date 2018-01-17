@@ -66,21 +66,24 @@ class Shoes # set shoe type, color, price, heel height
           # add a regex to take out additional numbers
         end  
           new_selection = @updated_selection.flatten!
-            better_selection = new_selection.collect do |new_shoes|
+            @better_selection = new_selection.collect do |new_shoes|
             new_shoes.split(" ")
-              better_selection.collect do |better_shoes|
+            end
+              @better_selection.collect do |better_shoes|
               better_shoes.slice!(-2..-1)
+                # now better_selection is assigned to shoes without last two indexes
         end
-              # create an "if statement" if array has more than 2 elements, than slice (-2..-1), else, slice(-1)
+          
+      # create an "if statement" if array has more than 2 elements, than slice (-2..-1), else, slice(-1)
       end
       # code works up to here
       # need to take out the 105 and second number - may need a regex for this 
      # the puts statement should select 3 random choices, based on user preferences 
       puts "Here are your results for #{occasion}:
-        1. #{selection[3]} 
-        2. #{selection[6]}
-        3. #{selection[8]}"
-    end 
+        1. #{@better_selection[3]} 
+        2. #{@better_selection[6]}
+        3. #{@better_selection[8]}"
+   
   end
 
 end 
