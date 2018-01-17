@@ -60,7 +60,7 @@ class Shoes # set shoe type, color, price, heel height
       black_shoes_scrape = Nokogiri::HTML(black_shoes)
       black_shoes_select = black_shoes_scrape.css("div .info_prodotto").text
       selection = black_shoes_select.split("QUICK VIEW")
-      binding.pry
+      
         @updated_selection = selection.collect do |select|
           select.split("105") 
           # add a regex to take out additional numbers
@@ -69,23 +69,7 @@ class Shoes # set shoe type, color, price, heel height
           @updated_selection.collect do |shoe_selection|
               shoe_selection.slice!(-1)
           end 
-#          new_selection = @updated_selection.flatten!
-#            @better_selection = new_selection.collect do |new_shoes|
-#            new_shoes.split(" ")
-#            end
-#              @better_selection.collect do |better_shoes|
-#              better_shoes.slice!(-2..-1)
-#              end
-                # now better_selection is assigned to shoes without last two indexes
-        
-#         @better_selection.collect do |selection|
-#           
-#            selection.split(" ")
-      # end
-                # create an "if statement" if array has more than 2 elements, than slice (-2..-1), else, slice(-1)
-      
-      # code works up to here
-      # need to take out the 105 and second number - may need a regex for this 
+      # *** need to display a string in puts statement below***
      # the puts statement should select 3 random choices, based on user preferences 
   
       puts "Here are your results for #{occasion}:

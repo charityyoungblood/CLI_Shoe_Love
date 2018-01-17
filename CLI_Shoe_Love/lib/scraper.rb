@@ -6,34 +6,6 @@ require_relative './shoes.rb'
 
 class Scraper 
   
-#  def user_selections 
-#    new_shoe = page_scrape.css("div .info_prodotto").text
-#    new_shoe.split("QUICK VIEW")
-#      self.get_shoes.each do |best_shoe|
-#      shoe = Shoes.new
-#      shoe.type = best_shoe.css("h2").text
-#      shoe.color = best_shoe.css(".date").text
-#      shoe.price = best_shoe.css("p").text
-#      shoe.heel_height = best_shoe.css("a").text 
-#      end 
-#    end 
-#  
-#  def get_shoes
-#    self.get_page.css("div .info_prodotto").text # this returns all of the text of the shoes on the home page, they are not sorted by color,price,etc
-#    
-#  end 
-#  
-#  def print_user_selections
-#    self.user_selections
-#    Shoes.all.each do |shoe|
-#      if shoe.type
-#        puts "Type: #{shoe.type}"
-#        puts "Color: #{shoe.color}"
-#        puts "Price: #{shoe.price}"
-#        puts "Heel height: #{shoe.heel_height}"
-#      end
-#    end 
-#  end 
   
   def get_page 
     # create an if statement - will probably need to be in another method - 
