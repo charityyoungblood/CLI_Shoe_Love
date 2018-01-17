@@ -29,18 +29,9 @@ class Shoes # set shoe type, color, price, heel height
     
       occasion = gets.chomp # save in a variable in case you need to operate on
     # ***RE-EVALUATE type attribute and how it connects to the program? Do you need a type - shoe name and type are connected once they are displayed*** 
+    puts "What shoe type do you prefer: Sandals, Booties, Flats, or Pumps"
+      type = gets.chomp 
     
-#      if occasion.downcase == "work"
-#          @type = ""
-        # Shoes.type should return - Pumps, Sandals, Booties, Flats - will pull from all shoe types
-      # if occasion.downcase == "night out"
-         # Shoes.type should include Pumps, Sandals and Booties 
-      # if occasion.downcase == "vacation"
-        # shoe type should not include pumps, booties
-        # Shoes.type should return - Sandals, Flats 
-      # if occasion.downcase == "special event"
-        # shoe type should include pumps, sandals
-        # Shoes.type should return - Pumps, Sandals 
     puts "What color shoes would you prefer: Black, Red, or Any"
       @color = gets.chomp
     
