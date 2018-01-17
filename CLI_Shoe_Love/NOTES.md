@@ -3,10 +3,11 @@ How to Build a CLI Gem - Project Outline
 
 1. Plan your gem, imagine the interface the user is going to use while interacting with your gem  
   - A command line interface for Aquazzura shoes, where user can sort by color, heel height or shoe type
-  - prompt the user with a greeting
-  - What type of occassion are you shopping for?
-  - What color shoes?
-  - What heel height? 
+  - prompt the user with a greeting, then asks the following questions: 
+      - What type of occassion are you shopping for?
+      - What color shoes?
+      - What heel height? 
+      
   - Example output: 
   
   Based on your preferences, here are a few options that would perfect for you!
