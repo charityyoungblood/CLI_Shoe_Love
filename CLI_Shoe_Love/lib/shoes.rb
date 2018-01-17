@@ -3,7 +3,7 @@ require 'pry'
 # this is the main class where you can ask a user questions 
 
 class Shoes # set shoe type, color, price, heel height 
-   attr_accessor :type, :price, :heel_height
+   attr_accessor :occasion, :type, :color
   # access to array of all shoes
   @@all = []
   def initialize 
@@ -27,22 +27,13 @@ class Shoes # set shoe type, color, price, heel height
     # this method will take in user input and return a list of three selections based on user preferences 
     puts "What type of occasion are you shopping for: Work, Night Out, Vacation, Special Event"
     
-      occasion = gets.chomp # save in a variable in case you need to operate on
+      @occasion = gets.chomp # save in a variable in case you need to operate on
     # ***RE-EVALUATE type attribute and how it connects to the program? Do you need a type - shoe name and type are connected once they are displayed*** 
     puts "What shoe type do you prefer: Sandals, Booties, Flats, or Pumps"
-      type = gets.chomp 
+      @type = gets.chomp 
     
     puts "What color shoes would you prefer: Black, Red, or Any"
       @color = gets.chomp
-    
-    # sort by occasion and then color 
-    puts "What is your ideal heel height (in inches): None, 4, 5, 6, 7"
-    # most shoes listed on sorted site are 105mm - 4 inches (black) and 105mm and 85mm - 3inches for red
-      @heel_height = gets.chomp
-    puts "What price range do you prefer: $450-$600, $600-$750, $750-$900, $900+"
-      @price = gets.chomp
-    shoe_name = "Baku Bootie"
-    shoe_type = "Bootie"
     
     # create a loop or call shoe_questions again so that if the user doesn't enter the correct data, they will be asked the question(s) again
     
