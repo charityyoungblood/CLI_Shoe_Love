@@ -38,7 +38,7 @@ class Shoes # set shoe type, color
       black_shoes_select = black_shoes_scrape.css("div .info_prodotto").text
       selection = black_shoes_select.split("QUICK VIEW")
       
-    
+    # we will not use the if statements below
     if @occasion.downcase == "work" && @type.downcase == "pumps" && @color.downcase == "black" 
 
         @updated_selection = selection.collect do |select|
