@@ -27,4 +27,8 @@ class Scraper
     nude_shoes_scrape = Nokogiri::HTML(nude_shoes)
   end 
     
+  def display_shoes # can I add an argument to be passed in so that it will evaluate and display any color shoe
+      black_shoes_select = black_shoes_scrape.css("div .info_prodotto").text
+      selection = black_shoes_select.split("QUICK VIEW")
+  end 
 end 

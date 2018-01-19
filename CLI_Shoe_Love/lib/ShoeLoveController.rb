@@ -3,6 +3,7 @@
 class ShoeLoveController
   
   def shoe_questions # this is the method where you can ask a user questions
+    # need to create a loop or call shoe_questions again so that if the user doesn't enter the correct data, they will be asked the question(s) again
     puts "What shoe type do you prefer: Sandals, Booties, Flats, or Pumps"
       @type = gets.chomp 
     
