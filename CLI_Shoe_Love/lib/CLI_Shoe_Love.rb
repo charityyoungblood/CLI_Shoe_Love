@@ -1,3 +1,5 @@
+# this should be your environment file - replace with data from environment.rb
+
 require_relative "CLI_Shoe_Love/version"
 
 module CLIShoeLove

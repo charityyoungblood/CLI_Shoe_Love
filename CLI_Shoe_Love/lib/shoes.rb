@@ -2,9 +2,16 @@ require 'pry'
 
 # this is the main class where you can ask a user questions 
 
-class Shoes # set shoe type, color, price, heel height 
-   attr_accessor :occasion, :type, :color
+class Shoes # set shoe type, color 
+  # this class should ONLY create objects and store them in @@all array
+   attr_accessor :type, :color
   # access to array of all shoes
+  
+  # create instances of the Shoe class
+  # find method with attribute type as argument 
+  # need to add create method and save method 
+  # Shoe.find_by_type(type)
+  # Shoe.find_by_color_and_type(@type, @color) 
   @@all = []
   def initialize 
     @@all << self 
@@ -18,25 +25,14 @@ class Shoes # set shoe type, color, price, heel height
     @@all = []
   end 
   
-  def color
-    @color
-  end 
   
   def shoe_questions # this method should prompt the user with questions for shoe type (occasion), color and heel height
    
     # this method will take in user input and return a list of three selections based on user preferences 
-    puts "What occasion are you shopping for: Work, Night Out, Vacation, Special Event"
     
-      @occasion = gets.chomp # save in a variable in case you need to operate on
-    # ***RE-EVALUATE type attribute and how it connects to the program? Do you need a type - shoe name and type are connected once they are displayed*** 
-    puts "What shoe type do you prefer: Sandals, Booties, Flats, or Pumps"
-      @type = gets.chomp 
-    
-    puts "What color shoes would you prefer: Black, Red, or Any"
-      @color = gets.chomp
     
     # create a loop or call shoe_questions again so that if the user doesn't enter the correct data, they will be asked the question(s) again
-    
+    # line 41 to 44 should be in Scraper class, in it's own method - line 47 - 50 needs to be moved
       black_shoes = HTTParty.get("https://www.aquazzura.com/en/boutique-online/woman/view-all.html?colori=2")
       black_shoes_scrape = Nokogiri::HTML(black_shoes)
       black_shoes_select = black_shoes_scrape.css("div .info_prodotto").text
@@ -49,11 +45,11 @@ class Shoes # set shoe type, color, price, heel height
           select.split("105") 
           # add a regex to take out additional numbers
         end  
-          puts "I'm here"
+          
           @updated_selection.collect do |shoe_selection|
               shoe_selection.slice!(-1)
           end 
-        puts "I'm here"
+        
    
     # ***if statement or unless statement to look for shoe type: Pump, Bootie, Sandal, Flat***
         
